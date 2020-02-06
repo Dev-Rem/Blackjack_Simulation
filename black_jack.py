@@ -117,29 +117,23 @@ def show_all(player,dealer):
     print("Dealer's Hand =",dealer.value)
     print("\nPlayer's Hand:", *player.cards, sep='\n ')
     print("Player's Hand =",player.value)
-
 def player_busts(player,dealer,chips):
     print("Player busts!")
     chips.lose_bet()
-
 def player_wins(player,dealer,chips):
     print("Player wins!")
     chips.win_bet()
-
 def dealer_busts(player,dealer,chips):
     print("Dealer busts!")
-    chips.win_bet()
-    
+    chips.win_bet()   
 def dealer_wins(player,dealer,chips):
     print("Dealer wins!")
-    chips.lose_bet()
-    
+    chips.lose_bet()  
 def push(player,dealer):
     print("Dealer and Player tie! It's a push.")
 while True:
     # Print an opening statement
-    print('Welcome to BlackJack! Get as close to 21 as you can without going over!\n\
-    Dealer hits until she reaches 17. Aces count as 1 or 11.')
+    print('Welcome to BlackJack!\n')
     
     # Create & shuffle the deck, deal two cards to each player
     deck = Deck()
